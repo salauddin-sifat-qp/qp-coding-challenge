@@ -24,8 +24,16 @@ This is a weekly coding challenge to help you practice your coding skills.
 ## Some Analytics
 
 ```mermaid
-pie title Pets adopted by volunteers
-    "Dogs" : 386
-    "Cats" : 85
-    "Rats" : 15
+pie title Coding Languages
+    "Python" : 2
+    "JavaScript" : 4
+    "Go" : 3
+```
+
+```mermaid
+xychart-beta
+    title Submissions
+    x-axis [saiful, shariful, samsul, illias, musa, mehedi, sifat, forhad, faizul, siddikey, saad, rafsan]
+    y-axis "Total Submissions"
+    bar [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
 ```
