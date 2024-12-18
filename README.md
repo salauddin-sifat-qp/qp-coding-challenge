@@ -16,6 +16,7 @@ This is a weekly coding challenge to help you practice your coding skills.
 - Create a new branch.
 - Create a new folder with your name in the appropriate folder.
 - Add your code in the folder.
+- Add a screenshot of your result.
 - Commit your changes.
 - Push your branch.
 - Create a pull request.
