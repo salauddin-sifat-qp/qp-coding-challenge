@@ -20,3 +20,12 @@ This is a weekly coding challenge to help you practice your coding skills.
 - Commit your changes.
 - Push your branch.
 - Create a pull request.
+
+## Some Analytics
+
+```mermaid
+pie title Pets adopted by volunteers
+    "Dogs" : 386
+    "Cats" : 85
+    "Rats" : 15
+```
