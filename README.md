@@ -23,15 +23,20 @@ This is a weekly coding challenge to help you practice your coding skills.
 
 ## Some Analytics
 
-```mermaid
-pie title Coding Languages
-    "Typescript" : 1
-```
-
-```mermaid
-xychart-beta
-    title Submissions
-    x-axis [saiful, shariful, samsul, illias, musa, mehedi, sifat, forhad, faizul, siddikey, saad, rafsan]
-    y-axis "Total Submissions"
-    bar [0,0,0,0,0,0,0,0,1,0,0,0]
-```
+| Chart 1: Coding Languages  | Chart 2: Submissions |
+| -------------------------- | -------------------- |
+| ```mermaid                 | ```mermaid           |
+| pie title Coding Languages | xychart-beta         |
+| "Typescript" : 3           | title Submissions    |
+| "Go" : 1                   | x-axis [saiful,      |
+| "Python" : 1               | shariful, samsul,    |
+| ```                        | illias, musa,        |
+|                            | mehedi, sifat,       |
+|                            | forhad, faizul,      |
+|                            | siddiky, saad,       |
+|                            | rafsan]              |
+|                            | y-axis "Total        |
+|                            | Submissions"         |
+|                            | bar [0,0,0,0,0,0,3,  |
+|                            | 0,1,0,0,1]           |
+|                            | ```                  |
