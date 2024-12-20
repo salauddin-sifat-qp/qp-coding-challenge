@@ -23,16 +23,13 @@ This is a weekly coding challenge to help you practice your coding skills.
 
 ## Some Analytics
 
-<table>
-<td>
 ```mermaid
 pie title Coding Languages
     "Typescript" : 3
     "Go" : 1
     "Python" : 1
 ```
-</td>
-<td>
+
 ```mermaid
 xychart-beta
     title Submissions
@@ -40,6 +37,3 @@ xychart-beta
     y-axis "Total Submissions"
     bar [0,0,0,0,0,0,3,0,1,0,0,1]
 ```
-
-</td>
-</table>
