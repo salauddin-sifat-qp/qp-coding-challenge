@@ -1,7 +1,7 @@
 var maximumProfit = function(prices) {
     if (prices.length > 0) {
         let minValue = prices[0];
-        let maxProfit = 0;
+        let maxProfit = 1;
         for (let i = 1; i < prices.length; i++) {
             let profit = prices[i] - minValue;
             if (profit > maxProfit) {
