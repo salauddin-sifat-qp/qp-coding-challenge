@@ -29,7 +29,7 @@ var searchInsert_initialSolution = function (nums, target) {
  * @param {number} target
  * @return {number}
  */
-var searchInsert = function (nums, target) {
+var searchInsert_midSolution = function (nums, target) {
   /**
    *  we loop through to find the target
    */
@@ -48,6 +48,28 @@ var searchInsert = function (nums, target) {
    *  so, the target is suppose to get inserted after the last element of the array, hence we return the array length
    */
   return nums.length;
+};
+
+/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number}
+ */
+var searchInsert_finalSolution = function (nums, target) {
+  let start = 0;
+  let end = nums.length - 1;
+  while (start <= end) {
+    let mid = Math.floor((start + end) / 2);
+    if (nums[mid] === target) return mid;
+    if (nums[mid] < target) {
+      start = mid + 1;
+    } else {
+      end = mid - 1;
+    }
+    // start = nums[mid] < target ? mid + 1: start;
+    // end = nums[mid] < target ? end : mid - 1;
+  }
+  return start;
 };
 
 console.log(searchInsert([1, 3, 4, 5, 6], 7));
