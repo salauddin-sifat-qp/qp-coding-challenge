@@ -25,15 +25,16 @@ This is a weekly coding challenge to help you practice your coding skills.
 
 ```mermaid
 pie title Coding Languages
-    "Python" : 2
-    "JavaScript" : 4
-    "Go" : 3
+    "Javascript": 2
+    "Typescript" : 4
+    "Go" : 1
+    "Python" : 1
 ```
 
 ```mermaid
 xychart-beta
     title Submissions
-    x-axis [saiful, shariful, samsul, illias, musa, mehedi, sifat, forhad, faizul, siddikey, saad, rafsan]
+    x-axis [saiful, shariful, samsul, illias, musa, mehedi, sifat, forhad, faizul, siddiky, saad, rafsun]
     y-axis "Total Submissions"
-    bar [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+    bar    [  0,      0,        0,      0,      0,     2,     4,       0,     1,       0,     0,     1  ]
 ```
