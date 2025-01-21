@@ -1,0 +1,60 @@
+<!-- frontend/src/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docker Compose Exercise</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .message {
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        .frontend-message {
+            background-color: #e3f2fd;
+        }
+        .backend-message {
+            background-color: #f1f8e9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="message frontend-message">
+            <h2>Hello from the Frontend!</h2>
+        </div>
+        <div class="message backend-message">
+            <h2 id="backendMessage">Loading...</h2>
+        </div>
+    </div>
+
+    <script>
+        fetch('http://localhost:5000')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('backendMessage').textContent = data.message;
+            })
+            .catch(error => {
+                document.getElementById('backendMessage').textContent = 'Error connecting to backend';
+                console.error('Error:', error);
+            });
+    </script>
+</body>
+</html>
