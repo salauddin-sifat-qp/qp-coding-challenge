@@ -1,0 +1,33 @@
+services:
+  # backend service
+  backend:
+    build: ./backend
+    ports:
+      - "3300:3300"
+    environment:
+      - PORT=3300
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
+    networks:
+      - a-docker
+
+  # frontend service
+  frontend:
+    build: ./frontend
+    ports:
+      - "3100:3100"
+    env_file:
+      - ./frontend/.env.development
+    environment:
+      - PORT=3100
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    networks:
+      - a-docker
+
+# networks
+networks:
+  a-docker:
+    driver: bridge
