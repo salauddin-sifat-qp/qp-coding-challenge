@@ -9,7 +9,7 @@ app.use(
   })
 );
 app.get("/", (req, res) => {
-  res.json({ message: "Hello Session!" });
+  res.json({ message: "Hello universe!" });
 });
 
 app.listen(port, () => {
