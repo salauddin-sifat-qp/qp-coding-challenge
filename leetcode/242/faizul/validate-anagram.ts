@@ -1,4 +1,4 @@
-function isAnagram(s: string, t: string): boolean {
+function validateAnagram(s: string, t: string): boolean {
   if (s.length !== t.length) return false;
 
   const map = new Map<string, number>();
