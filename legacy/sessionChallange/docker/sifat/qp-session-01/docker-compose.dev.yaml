@@ -1,0 +1,30 @@
+services:
+  client:
+    build:
+      context: ./client
+      dockerfile: dockerfile.dev
+    ports:
+      - "5173:5173"
+    networks:
+      - dev
+    volumes:
+      - ./client:/app
+      - /app/node_modules
+    depends_on:
+      - server
+
+  server:
+    build:
+      context: ./server
+      dockerfile: dockerfile
+    ports:
+      - "3000:3000"
+    networks:
+      - dev
+    volumes:
+      - ./server:/app
+      - /app/node_modules
+    command: npm run dev
+networks:
+  dev:
+    driver: bridge
