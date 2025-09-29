@@ -6,8 +6,7 @@ class Solution:
     # HashSet
     def intersection(self, nums1: List[int], nums2: List[int]) -> List[int]:
         return list(set(nums1) & set(nums2))
-    
-# Time 
+
 # Time Complexity: O(n log n + m log m), where n and m are the lengths of nums1 and nums2 (due to sorting).
 # Space Complexity: O(1) if we ignore the output list/set, otherwise O(k) for the result set (where k is the number of unique intersections).
 class Solution2:
