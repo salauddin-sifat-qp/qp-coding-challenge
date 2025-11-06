@@ -36,5 +36,23 @@ var intToRoman = function (num) {
   }
   return ans;
 };
-const number = 41;
-console.log(intToRoman(number));
+
+var intToRoman2 = function (num) {
+  let ans = "";
+  let temp = num;
+
+  roman.forEach((value, key) => {
+    let res = Math.floor(temp / value);
+    if (value <= temp && temp != 0) {
+      temp = temp % (res * value);
+      console.log(res * value, temp, key.repeat(res));
+
+      ans += key.repeat(res);
+    }
+  });
+
+  return ans;
+};
+
+const number = 3749;
+console.log(intToRoman2(number));
