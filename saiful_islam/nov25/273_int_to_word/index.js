@@ -36,10 +36,7 @@ const tens = [
 
 const thousands = ["", "Thousand", "Million", "Billion"];
 
-/**
- * @param {number} num
- * @return {string}
- */
+
 var numberToWords = function (num) {
   if (num === 0) return "Zero";
 
