@@ -2,6 +2,8 @@
  * @param {character[]} s
  * @return {void} Do not return anything, modify s in-place instead.
  */
+
+// 0ms
 var reverseString = function (s) {
   count = s.length - 1;
   while (count != 0) {
@@ -14,8 +16,21 @@ var reverseString = function (s) {
     }
   }
 };
-const input = ["h", "e", "l", "l", "o", "o"];
+// 578ms
+var reverseString2 = function (s) {
+  let count = 0;
+  for (let i = s.length - 1; i >= 0; i--) {
+    s.push(s[i]);
+    count++;
+  }
+  while (count > 0) {
+    s.shift();
+    count--;
+  }
+};
+
+const input = ["h", "e", "l", "l", "o"];
 console.log("input", input);
 
-reverseString(input);
+reverseString2(input);
 console.log("output", input);
