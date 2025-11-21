@@ -1,0 +1,23 @@
+function romanToInt(s: string): number {
+  const valueMap: Record<string, number> = {
+    I: 1,
+    V: 5,
+    X: 10,
+    L: 50,
+    C: 100,
+    D: 500,
+    M: 1000,
+  };
+  let total = 0;
+
+  for (let i = 0; i < s.length; i++) {
+    const currentValue = valueMap[s[i]];
+    const nextValue = valueMap[s[i + 1]];
+    if (nextValue != undefined && currentValue < nextValue) {
+      total -= currentValue;
+    } else {
+      total += currentValue;
+    }
+  }
+  return total;
+}
