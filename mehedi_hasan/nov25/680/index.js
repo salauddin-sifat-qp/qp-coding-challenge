@@ -11,18 +11,26 @@ const testcases = ["aba", "abca", "abc"];
 
 const expected = [true, true, false];
 
+const isValidPalindrome = function (s, leftIndex, rightIndex) {
+  while (leftIndex < rightIndex) {
+    if (s[leftIndex] != s[rightIndex]) {
+      return false;
+    }
+    leftIndex++;
+    rightIndex--;
+  }
+  return true;
+};
+
 var validPalindrome = function (s) {
-  let sentance = s.toLowerCase().replace(/[^a-z0-9]/g, "");
-
   let left = 0;
-  let right = sentance.length - 1;
+  let right = s.length - 1;
   while (left < right) {
-    if (sentance[left] != sentance[right]) {
-      if (skiped) {
-        return false;
-      } else {
-        skipped = true;
-      }
+    if (s[left] != s[right]) {
+      return (
+        isValidPalindrome(s, left + 1, right) ||
+        isValidPalindrome(s, left, right - 1)
+      );
     }
 
     left++;
@@ -32,28 +40,4 @@ var validPalindrome = function (s) {
   return true;
 };
 
-var validPalindrome2 = function (s) {
-  let sentance = s.toLowerCase().replace(/[^a-z0-9]/g, "");
-
-  let left = 0;
-  let right = sentance.length - 1;
-
-  while (left < right) {
-    lefSide += sentance[left];
-    rightSide += sentance[right];
-    if (sentance[left] != sentance[right]) {
-      if (skiped) {
-        return false;
-      } else {
-        skipped = true;
-      }
-    }
-
-    left++;
-    right--;
-  }
-
-  return true;
-};
-
-console.log(validPalindrome("rac e car"));
+console.log(validPalindrome("ab bba"));
