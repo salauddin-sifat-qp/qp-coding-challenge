@@ -1,3 +1,4 @@
+// Submission URL: https://leetcode.com/problems/first-bad-version/submissions/1886431053
 var solution = function(isBadVersion: any) {
 
     return function(n: number): number {
